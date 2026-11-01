@@ -1,0 +1,7 @@
+@use '../abstracts' as *;
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  min-height: $tap-target;
+}

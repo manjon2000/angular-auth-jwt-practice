@@ -1,0 +1,29 @@
+@use '../abstracts' as *;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+
+  &__label {
+    font-weight: 600;
+  }
+
+  &__input {
+    width: 100%;
+    min-height: $tap-target;
+    padding: $space-sm $space-md;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: $radius;
+
+    &--invalid {
+      border: 3px solid var(--color-text);
+    }
+  }
+
+  &__error {
+    font-weight: 700;
+  }
+}

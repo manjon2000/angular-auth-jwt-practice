@@ -1,0 +1,23 @@
+@use '../abstracts' as *;
+
+.skip-link {
+  position: absolute;
+  top: $space-sm;
+  right: $space-sm;
+  left: $space-sm;
+  z-index: 1;
+  padding: $space-sm $space-md;
+  color: var(--color-header);
+  background-color: var(--color-on-header);
+  border-radius: $radius;
+  transform: translateY(-200%);
+
+  &:hover {
+    color: var(--color-header);
+  }
+
+  &:focus {
+    outline-color: var(--color-on-header);
+    transform: translateY(0);
+  }
+}

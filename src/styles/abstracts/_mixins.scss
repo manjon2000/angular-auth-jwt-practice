@@ -1,0 +1,13 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+@mixin from($breakpoint) {
+  @media (min-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin focus-ring {
+  outline: $focus-width solid var(--color-focus);
+  outline-offset: $focus-offset;
+}

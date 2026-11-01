@@ -1,0 +1,18 @@
+@use '../abstracts' as *;
+
+.alert {
+  padding: $space-md;
+  border-left: 4px solid currentColor;
+  border-radius: $radius;
+
+  &--info {
+    background-color: var(--color-surface);
+  }
+
+  &--error {
+    font-weight: 600;
+    color: var(--color-on-primary);
+    background-color: var(--color-primary);
+    border-left-color: var(--color-primary);
+  }
+}

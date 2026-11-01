@@ -1,0 +1,13 @@
+@use '../abstracts' as *;
+
+.login {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+  }
+
+  &__submit {
+    width: 100%;
+  }
+}

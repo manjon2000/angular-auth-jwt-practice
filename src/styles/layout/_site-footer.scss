@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.site-footer {
+  padding: $space-md;
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+
+  @include from('md') {
+    padding-inline: $space-xl;
+  }
+
+  &__text {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+  }
+}

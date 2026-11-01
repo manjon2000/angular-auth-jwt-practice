@@ -1,0 +1,23 @@
+@use '../abstracts' as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+  width: 100%;
+  max-width: $content-width;
+  margin-inline: auto;
+  padding: $space-lg $space-md;
+
+  @include from('md') {
+    padding: $space-xl;
+  }
+
+  &--narrow {
+    max-width: $form-width;
+
+    @include from('md') {
+      padding-inline: $space-md;
+    }
+  }
+}

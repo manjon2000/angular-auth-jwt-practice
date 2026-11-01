@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.site-header {
+  padding: $space-md;
+  color: var(--color-on-header);
+  background-color: var(--color-header);
+  border-bottom: 1px solid var(--color-border);
+
+  @include from('md') {
+    padding-inline: $space-xl;
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+}

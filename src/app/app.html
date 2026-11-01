@@ -1,0 +1,25 @@
+<div class="app">
+  <a class="skip-link" href="#main-content" (click)="skipToContent($event)">
+    Saltar al contenido principal
+  </a>
+
+  <header class="site-header">
+    <p class="site-header__title">Autenticación con Angular</p>
+  </header>
+
+  <main #mainContent id="main-content" class="app__main" tabindex="-1">
+    <router-outlet />
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer__text">
+      Copyright © 2026 Autenticación con Angular. Todos los derechos reservados a
+      <a
+        href="https://www.linkedin.com/in/albert-jurado-manjon/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Albert Jurado Manjon</a
+      >.
+    </p>
+  </footer>
+</div>

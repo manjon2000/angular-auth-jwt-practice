@@ -1,0 +1,60 @@
+<div class="page page--narrow login">
+  <h1>Iniciar sesión</h1>
+
+  <p class="alert alert--info">
+    Demo con API simulada. Entra con <code>admin&#64;test.com</code> o
+    <code>user&#64;test.com</code> y la contraseña <code>1234</code>.
+  </p>
+
+  <form class="login__form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+    <div class="field">
+      <label class="field__label" for="email">Email (obligatorio)</label>
+      <input
+        id="email"
+        class="field__input"
+        [class.field__input--invalid]="showError('email')"
+        type="email"
+        autocomplete="username"
+        required
+        formControlName="email"
+        [attr.aria-invalid]="showError('email')"
+        [attr.aria-describedby]="showError('email') ? 'email-error' : null"
+      />
+      @if (showError('email')) {
+        <p id="email-error" class="field__error">Error: introduce un email válido.</p>
+      }
+    </div>
+
+    <div class="field">
+      <label class="field__label" for="password">Contraseña (obligatoria)</label>
+      <input
+        id="password"
+        class="field__input"
+        [class.field__input--invalid]="showError('password')"
+        type="password"
+        autocomplete="current-password"
+        required
+        formControlName="password"
+        [attr.aria-invalid]="showError('password')"
+        [attr.aria-describedby]="showError('password') ? 'password-error' : null"
+      />
+      @if (showError('password')) {
+        <p id="password-error" class="field__error">Error: introduce tu contraseña.</p>
+      }
+    </div>
+
+    @if (errorMessage(); as message) {
+      <p class="alert alert--error" role="alert">Error: {{ message }}</p>
+    }
+
+    <p class="visually-hidden" role="status">{{ submitting() ? 'Iniciando sesión…' : '' }}</p>
+
+    <button
+      class="button button--primary login__submit"
+      type="submit"
+      [attr.aria-disabled]="submitting()"
+    >
+      {{ submitting() ? 'Entrando…' : 'Entrar' }}
+    </button>
+  </form>
+</div>
